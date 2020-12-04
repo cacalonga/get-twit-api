@@ -1,0 +1,70 @@
+<div class="container">
+    <div class="jumbotron">
+        <form class="form-inline" action="/tweets" method="POST">
+            <div class="form-group mx-sm-3 mb-2">
+                <label>Example select &nbsp&nbsp&nbsp</label>
+                <select class="form-control" name="tokenID">
+                    {{#each tokens as |tk key|}}
+                    <option value="{{tk._id}}">{{tk.name}}</option>
+                    {{/each}}
+                </select>
+            </div>
+            <div class="form-group mx-sm-3 mb-2">
+                <label>Tweet Count</label>&nbsp&nbsp&nbsp
+                <input type="number" class="form-control" id="txtTweetCount" name="txtTweetCount" placeholder="Tweet Count"
+                    required>&nbsp&nbsp&nbsp
+                <small class="form-text text-muted">You write here how many want to see Tweet</small>
+            </div>
+                &nbsp&nbsp&nbsp
+            <button type="submit" class="btn btn-primary getTweets">GetTweets</button>
+        </form>
+        <hr>
+        <hr>
+        <form action="/" method="POST">
+            <div class="form-group">
+                <label>Account Title</label>
+                <input type="text" class="form-control" id="txtAccountTitle" name="txtAccountTitle" placeholder="Account Title"
+                    required>
+                <small class="form-text text-muted">Enter The Account Title</small>
+            </div>
+            <div class="form-group">
+                <label>Client ID</label>
+                <input type="text" class="form-control" id="txtClientID" name="txtClientID" placeholder="Client ID"
+                    required>
+                <small class="form-text text-muted">You can get Client ID from https://www.instagram.com/developer/</small>
+            </div>
+            <div class="form-group">
+                <label>Client Secret</label>
+                <input type="text" class="form-control" id="txtClientSecret" name="txtClientSecret" placeholder="Client Secret"
+                    required>
+                <small class="form-text text-muted">You can get Client Secret from https://www.instagram.com/developer/</small>
+            </div>
+            <div class="form-group">
+                <label>Access Token</label>
+                <input type="text" class="form-control" id="txtAccessToken" name="txtAccessToken" placeholder="Access Token"
+                    required>
+                <small class="form-text text-muted">You can get Access Token from https://www.instagram.com/developer/</small>
+            </div>
+            <div class="form-group">
+                <label>Access Token Secret</label>
+                <input type="text" class="form-control" id="txtAccessTokenSecret" name="txtAccessTokenSecret"
+                    placeholder="Access Token Secret" required>
+                <small class="form-text text-muted">You can get Access Token Secret from
+                    https://www.instagram.com/developer/</small>
+            </div>
+            <div class="form-group">
+                <label>#Hashtag</label>
+                <input type="text" class="form-control" id="txtHashtag" name="txtHashtag" placeholder="Hashtag"
+                    required>
+                <small class="form-text text-muted">You write here what want to catch Hashtag word</small>
+            </div>
+            <div class="form-group">
+                <label>Tweet Count</label>
+                <input type="number" class="form-control" id="txtTweetCount" name="txtTweetCount" placeholder="Tweet Count"
+                    required>
+                <small class="form-text text-muted">You write here how many want to see Tweet</small>
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg btn-block getTweets">Save Token</button>
+        </form>
+    </div>
+</div>
